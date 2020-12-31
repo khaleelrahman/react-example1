@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
+import { ApolloProvider,ApolloClient,createHttpLink,InMemoryCache } from "@apollo/client";
 
+const httpLink=createHttpLink({
+  uri:"https://rickandmortyapi.com/graphql"
+})
+const client=new ApolloClient(
+  {
+    link:httpLink,
+    cache:new InMemoryCache()
+  }
+)
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
+  <ApolloProvider client={client}>
+  
     <App />
-  </React.StrictMode>,
+ </ApolloProvider></BrowserRouter>,
   document.getElementById('root')
 );
 
