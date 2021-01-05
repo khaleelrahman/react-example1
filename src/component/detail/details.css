@@ -6,42 +6,44 @@
     top: 0;
     overflow-x: hidden;
     padding-top: 20px;
+    
+     
   }
   
   /* Control the left side */
   .left {
     left: 0;
-    background-color:linear-gradient(to right, #9C27B0, #E040FB);;
+    background-color:linear-gradient(to right, #9C27B0, #E040FB);
+    margin-top:50px;
+    
   }
   
   /* Control the right side */
   .right {
     right: 0;
-    background-color:linear-gradient(to right, #9C27B0, #E040FB);;
+    background-color:linear-gradient(to right, #9C27B0, #E040FB);
+    
   }
   
-  /* If you want the content centered horizontally and vertically */
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+  
   
   /* Style the image inside the centered container, if needed */
-  .centered img {
-    width: 150px;
+   img {
+    
+    width: 75px;
     border-radius: 50%;
   }
   .card-containered {
     display: flex;
     flex-direction: column;
-    background-color: #8C55AA;
+    background-color:white;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 0px;
-    margin-top: 70px;
+    margin-top: 50px;
+    margin-bottom:-2rem;
+    margin-right: 25px;
+    margin-left: 25px;
     cursor: pointer;
     -moz-osx-font-smoothing: grayscale;
     backface-visibility: hidden;
@@ -88,4 +90,57 @@
     background: #ffffff;
     border-radius: 18px;
     border: 1px solid #cfcece;
+  }
+
+
+  .card-text-headered{
+    font-size: 15px;
+    font-family: 'Arial';
+    color: white;
+    text-align: left;
+    margin-left: 10px;
+  
+  }
+
+  .submiteded {
+    cursor: pointer;
+    
+    color: black;
+    background: white;
+    border: solid yellow;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 35%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 13px;
+    
+    align-items: center;
+    
+    }
+    
+  .img-align{
+    align-items: flex-start;
+  }
+    .card-headered{
+      background-color: royalblue;
+    }
+    .card-texted{
+      font-size: 25;
+      font-family: 'Staatliches';
+      color: black;
+      text-align: left;
+    }
+    .card-footed{
+      border-top: 1px solid royalblue;
+      margin-left: 5px;
+      margin-right: 5px;
+      
+      background-color: white;
+    }
+.divide{
+  border-left:3px solid royalblue;
   }
