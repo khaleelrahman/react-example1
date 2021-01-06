@@ -1,15 +1,17 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import './card.css'
-
+import { Grid } from "@material-ui/core";
  const Card=(props)=>{
 console.log(props)
 
-const onsubmited=()=>props.history.push({pathname:'/details', state:{data:props.mon}})
+const onsubmited=()=>props.history.push({pathname:'/details', state:{data:props.mon,usedata:props.location}})
 
 
 return(
-    <div>
+    
+  
+    
     <div className='card-container'>
     <div className='card-header'><h1 className='card-text-header'>{props.mon.name}</h1></div>
     <h1 className='card-text'>Status: &emsp;{props.mon.status}</h1>
@@ -17,8 +19,6 @@ return(
     <div className='card-foot' onClick={onsubmited}  >
     <div ><button className='submited'>View Details</button></div>
     </div>
-    </div>
-    
     </div>
 )}
 export default withRouter(Card);

@@ -6,8 +6,10 @@ import {
     Button,
   } from "@material-ui/core";
   import React from "react";
-  import { Link as RouterLink } from "react-router-dom";
-  
+  import { Link as RouterLink, withRouter } from "react-router-dom";
+  import { Popup } from "reactjs-popup";
+  import 'reactjs-popup/dist/index.css';
+  import './header.css'
   const headersData = [
     {
         label:"Khaleel",
@@ -43,9 +45,10 @@ import {
   }));
   
                        
-  export default function Header() {
+  const Header=(props)=> {
+    const logOut=()=>props.history.push('/login')
     const { header, logo,button ,toolbar} = useStyles();
-                       
+        console.log(props)               
     const displayDesktop = () => {
       return (
         <Toolbar className={toolbar}>
@@ -63,22 +66,30 @@ import {
       </Typography>
     );
                        
-    const getMenuButtons = () => {
-      return headersData.map(({ label, href }) => {
-        return (
-          <Button
-            {...{
-              key: label,
-              color: "inherit",
-              to: href,
-              component: RouterLink,
-            }} className={button}
+    const getMenuButtons = (position) => {
+          return (
+            <div className='pop-head'>
+            <Popup trigger={
+          <Button key= {props.userName} color= "inherit"   className={button}
           >
-            {label}
-          </Button>
+            {props.userName}
+          </Button>}
+         position= 'bottom center'
+         arrow={position !== 'center center'} className="pop-head"
+         >
+         <div > <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum. Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos?
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+         <button className="but" onClick={logOut} >Log Out</button>
+         
+         </div>
+        
+         </Popup>
+         </div>
         );
-      });
+      
     };
+
+    
                        
     return (
       <header>
@@ -86,3 +97,5 @@ import {
       </header>
     );
   }
+
+  export default withRouter(Header)

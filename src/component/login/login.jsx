@@ -1,39 +1,44 @@
-import React from "react";
+import React ,{useState}from "react";
 
 import { ErrorMessage, Field, Formik,Form } from "formik";
 import {  withRouter } from "react-router-dom";
 import './login.css'
+import { logdata } from "./data.json";
+import * as Yup from 'yup';
+
+const LoginValidation = Yup.object().shape({
+    
+    email: Yup
+      .string()
+      .email()
+      .required(),
+    password: Yup
+      .string()
+      .min(6)
+      .max(16)
+      .required('Invalid Email or password'),
+  })
 
 const Basic=(props)=>{
     console.log(props)
+    const[isLogin,setLogin]=useState(false);
+    console.log(logdata[0].email)
     return(
     <div className="main">
     <p className='sign'>Login</p>
     <Formik initialValues={{email:"",password:""}}
-    validate={
-        values=>{
-            const errors={};
-            if(!values.email){
-                errors.email='Required';
-            }
-            else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)){
-                errors.email='Invalid Email Address'
-            }
-            if(values.password!=='123456'){
-                errors.password='Invalid Email Address or Password'
-            }
-            if(!values.password){
-                errors.password='Required';
-            }
-            return errors;
-        }
-    }
+    validationSchema= {LoginValidation}
     onSubmit={(values)=>{
         console.log(values.email)
-            if (values){
-                props.history.push("/homepage")
-            }
-    }}
+        console.log(logdata[0].password)
+        if (values.email===logdata[0].email&&values.password===logdata[0].password){
+        setLogin(!isLogin);
+        }
+            
+           
+            
+        }}
+    
     
     >
     {({
@@ -41,10 +46,10 @@ const Basic=(props)=>{
         isSubmitting,
     })=>(
         <Form className='form1'>
-            <Field className='un' type='email' name="email" placeholder="Enter Your Email"/>
-            <ErrorMessage name='email' component='div'/>
+            <Field className='un' type='email' values={logdata[0].email}  name="email" placeholder="Enter Your Email"/>
+            <ErrorMessage name='email' component='div' className="err"/>
             <Field type='password' name="password" className="pass" placeholder="Enter Your Password"/>
-            <ErrorMessage name='password' component='div'/>
+            <ErrorMessage name='password' component='div' className='err'/>
            <button name='submit' className="submit" type='submit' onClick={onsubmit}>Login</button>
            
         </Form>
@@ -52,6 +57,16 @@ const Basic=(props)=>{
     
     
     </Formik>
+    {
+        isLogin&&<div>
+        {
+           
+                 props.history.push({pathname:'/homepage', state:{udata:logdata[0].username}})
+             
+        }        
+        
+        </div>
+    }
     </div>
     )}
 export default withRouter( Basic)

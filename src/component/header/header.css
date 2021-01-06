@@ -1,0 +1,11 @@
+.pop-head{
+    
+    width: 50%;
+    margin-right: 50px;
+}
+.but{
+    background-color: royalblue;
+    border: royalblue;
+    cursor: pointer;
+    
+}

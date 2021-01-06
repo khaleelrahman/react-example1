@@ -24,21 +24,24 @@ const QUERRY=gql`
 `
 
 
- const Home=()=>{
+ const Home=(props)=>{
     
      const {data}=useQuery(QUERRY)
     console.log(data)
+    console.log(props.location.state.udata)
     return (
         
         
     <>
-    <Header/>
+    <div>
+    <Header  userName={props.location.state.udata} /></div>
      {data &&(
-    <div className="card-list">
+       <div className="header">
+    <div className='card-list'>
     {data.episodesByIds[0].characters.map((mon,index)=>
         (<Card key={index} mon={mon} index={index}/>))}
     </div>
-    
+    </div>
     )}
     </>
     

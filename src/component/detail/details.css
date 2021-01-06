@@ -58,44 +58,11 @@
   .pop-cont{
     background-color:#8C55AA ;
   }
-  .modal {
-    font-size: 12px;
-  }
-  .modal > .header {
-    width: 100%;
-    border-bottom: 1px solid gray;
-    font-size: 18px;
-    text-align: center;
-    padding: 5px;
-  }
-  .modal > .content {
-    width: 100%;
-    padding: 10px 5px;
-  }
-  .modal > .actions {
-    width: 100%;
-    padding: 10px 5px;
-    margin: auto;
-    text-align: center;
-  }
-  .modal > .close {
-    cursor: pointer;
-    position: absolute;
-    display: block;
-    padding: 2px 5px;
-    line-height: 20px;
-    right: -10px;
-    top: -10px;
-    font-size: 24px;
-    background: #ffffff;
-    border-radius: 18px;
-    border: 1px solid #cfcece;
-  }
-
+  
 
   .card-text-headered{
-    font-size: 15px;
-    font-family: 'Arial';
+    font-size: 16px;
+    font-family: "Muli", "sans-serif";
     color: white;
     text-align: left;
     margin-left: 10px;
@@ -107,7 +74,7 @@
     
     color: black;
     background: white;
-    border: solid yellow;
+    border: 1.5px solid yellow;
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 10px;
@@ -118,7 +85,7 @@
     margin-bottom: 1%;
     font-size: 13px;
     
-    align-items: center;
+    align-items: right;
     
     }
     
@@ -128,19 +95,24 @@
     .card-headered{
       background-color: royalblue;
     }
-    .card-texted{
-      font-size: 25;
-      font-family: 'Staatliches';
-      color: black;
-      text-align: left;
-    }
+   
     .card-footed{
       border-top: 1px solid royalblue;
       margin-left: 5px;
       margin-right: 5px;
-      
+      padding-left: 50%;
+      align-content: flex-end;
       background-color: white;
     }
 .divide{
   border-left:3px solid royalblue;
+  }
+
+  .check{
+    text-align: center;
+    border-top: 1px solid royalblue;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-family: "Muli", "sans-serif";    ;
   }
