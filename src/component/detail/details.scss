@@ -8,10 +8,10 @@
     padding-top: 20px;
     
      
-  }
+  
   
   /* Control the left side */
-  .left {
+  &.left {
     left: 0;
     background-color:linear-gradient(to right, #9C27B0, #E040FB);
     margin-top:50px;
@@ -19,12 +19,12 @@
   }
   
   /* Control the right side */
-  .right {
+  &.right {
     right: 0;
     background-color:linear-gradient(to right, #9C27B0, #E040FB);
     
   }
-  
+
   
   
   /* Style the image inside the centered container, if needed */
@@ -33,6 +33,7 @@
     width: 75px;
     border-radius: 50%;
   }
+
   .card-containered {
     display: flex;
     flex-direction: column;
@@ -114,5 +115,20 @@
     margin-top: 3px;
     margin-bottom: 3px;
     font-size: 14px;
-    font-family: "Muli", "sans-serif";    ;
+    font-family: "Muli", "sans-serif"; 
+    
+    margin-left: 150px;
+    margin-right: 150px;   ;
+  
+  
+  
+  .alaign{
+    text-align:start;
+    margin-left: 70px;
+  }
+  .text-bod{
+    border: white;
+  }
+ 
+}
   }

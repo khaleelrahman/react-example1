@@ -1,6 +1,7 @@
 import React,{useState} from "react";
-import './details.css'
+import './details.scss'
 import { Popup } from "reactjs-popup";
+import Box from './box';
 const DetailCard=()=>{
 
     const [isOpen, setIsOpen] = useState(false);
@@ -9,14 +10,39 @@ const[addSubmit,setSubmit]=useState(false);
 const [title, setTitle] = useState('')
 const togglePopup = () => {
   setIsOpen(!isOpen);
+  
 }
 const toggleAdd = () => {
   setAdd(!addOpen);
+  
+  
+  
 }
 const toggleSubmit = () => {
     setSubmit(!addSubmit);
-    setAdd(addOpen);
+    setAdd(!addOpen)
+    
   }
+
+  const [fields, setFields] = useState([{ value: null }]);
+
+  function handleChange(i, event) {
+    const values = [...fields];
+    values[i].value = event.target.value;
+    setFields(values);
+  }
+
+  function handleAdd() {
+    const values = [...fields];
+    values.push({ value: null });
+    setFields(values);
+    setAdd(!addOpen)
+    
+  
+  }
+
+ 
+  
   console.log(title)
 
     return(
@@ -33,39 +59,56 @@ const toggleSubmit = () => {
         
           <button onClick={togglePopup} className='submiteded'> ...</button> </div>
           {isOpen && <div className="check">
-          <input type='checkbox' value='Python'/>
-          <label >Python</label>
-          <input type='checkbox' value='Python'/>
-          <label>JavaScript</label>
-          <input type='checkbox' value='Python'/>
-          <label>C</label>
-          <input type='checkbox' value='Python'/>
-          <label>C++</label>
-          {
-            addSubmit&&  <div>
+            <div className='alaign'>
+              <p><input type='checkbox' value='Python'/>
+              <label >Python</label> </p>
+              
+              <p>  <input type='checkbox' value='Python'/>
+              <label>JavaScript</label></p>
             
-            <input type='checkbox' value='Python'/>
-          <label>{title}</label>
+              <p> <input type='checkbox' value='Python'/>
+              <label>C</label></p>
+          
+              <p><input type='checkbox' value='Python'/>
+              <label>C++</label></p>
+            
+          {
+            !addSubmit  &&  <div>
+            
+            {fields.map((field, idx) => {
+              return (
+                <div key={`${field}-${idx}`}>
+                  <input
+                    type="checkbox"
+                    
+                  /> <input type='text' className='text-bod' onChange={(e)=>setTitle(e.target.value) }/>
+              
+                </div>
+              );
+            })}
             
             </div>
           }
-
-          { <div>
-          <Popup
-          trigger={
-              <button onClick={toggleAdd}>Add</button>
-          }
-          position="right center"
-          closeOnDocumentClick
-          >
-          <span> <input type='text' onChange={event => setTitle(event.target.value)}/>
-          <button onClick={toggleSubmit} >Submit</button>
-
-          </span>
-          </Popup>
+         </div>
+         
+          <div>
+              { !addOpen   &&<div>
+            
+              <button onClick={toggleAdd} className='checkAdd'>Add</button>
+             
+              </div>
+              }
+              {
+                addOpen && <div>
+               
+                <button onClick={handleAdd}>Submit</button>
+                </div>
+              }
+         
           </div>
-          }
-          </div>}
+
+          
+          </div> }
                 
             </div>
 

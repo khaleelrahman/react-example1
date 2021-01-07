@@ -2,7 +2,7 @@ import React ,{useState}from "react";
 
 import { ErrorMessage, Field, Formik,Form } from "formik";
 import {  withRouter } from "react-router-dom";
-import './login.css'
+import './login.scss'
 import { logdata } from "./data.json";
 import * as Yup from 'yup';
 

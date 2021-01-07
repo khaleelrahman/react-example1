@@ -9,7 +9,7 @@ import {
   import { Link as RouterLink, withRouter } from "react-router-dom";
   import { Popup } from "reactjs-popup";
   import 'reactjs-popup/dist/index.css';
-  import './header.css'
+  import './header.scss'
   const headersData = [
     {
         label:"Khaleel",

@@ -1,6 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
-import './card.css'
+import './card.scss'
 import { Grid } from "@material-ui/core";
  const Card=(props)=>{
 console.log(props)

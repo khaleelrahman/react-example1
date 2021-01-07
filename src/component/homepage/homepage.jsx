@@ -2,7 +2,7 @@ import React from "react";
 
 import { gql, useQuery } from "@apollo/client";
 import  Card  from "./list";
-import './card.css'
+import './card.scss'
 import Header from "../header/header";
 
 const QUERRY=gql`

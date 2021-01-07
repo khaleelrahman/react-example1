@@ -1,5 +1,5 @@
 import React from "react";
-import './details.css'
+import './details.scss'
 import Header from '../header/header'
 
 import DetailCard from "./detailCard";
