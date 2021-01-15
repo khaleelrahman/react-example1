@@ -1,0 +1,46 @@
+.gridview{
+
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-gap: 10px;
+    column-gap: 1px;
+    
+    grid-template-rows: 50px;
+    padding-bottom: 25px;
+    }
+    .col{
+      cursor: pointer;
+      background-color: rgb(158, 152, 152);
+      text-align: center;
+      font-size: 18px;
+      
+      padding-top:20px;
+      
+    }
+    .col1{
+      cursor: pointer;
+      background-color: rgb(236, 228, 228);
+      text-align: center;
+      font-size: 18px;
+      
+      padding-top:20px;
+      
+    }
+    .col2{
+      cursor: pointer;
+      background-color: rgb(243, 210, 210);
+      text-align: center;
+      font-size: 18px;
+      
+      padding-top:20px;
+      
+    }
+    .col3{
+      cursor: pointer;
+      background-color: rgb(223, 93, 93);
+      text-align: center;
+      font-size: 18px;
+      
+      padding-top:20px;
+      
+    }

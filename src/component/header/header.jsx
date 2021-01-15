@@ -46,9 +46,10 @@ import {
   
                        
   const Header=(props)=> {
-    const logOut=()=>props.history.push('/login')
+    const logOut=()=>{props.history.push('/login');
+    localStorage.clear();}
     const { header, logo,button ,toolbar} = useStyles();
-        console.log(props)               
+                       
     const displayDesktop = () => {
       return (
         <Toolbar className={toolbar}>
@@ -57,6 +58,7 @@ import {
           {getMenuButtons()}
           </div>
         </Toolbar>
+       
       );
     };
                        
@@ -67,12 +69,15 @@ import {
     );
                        
     const getMenuButtons = (position) => {
+        let a=localStorage.getItem('user')
+        console.log(a)
           return (
+          
             <div className='pop-head'>
             <Popup trigger={
-          <Button key= {props.userName} color= "inherit"   className={button}
+          <Button key= {localStorage.getItem('user')} color= "inherit"   className={button}
           >
-            {props.userName}
+          {localStorage.getItem('user')}
           </Button>}
          position= 'bottom center'
          arrow={position !== 'center center'} className="pop-head"
@@ -89,9 +94,10 @@ import {
       
     };
 
-    
+    console.log(localStorage.getItem("token"))
                        
     return (
+      
       <header>
         <AppBar className={header}>{displayDesktop()}</AppBar>
       </header>

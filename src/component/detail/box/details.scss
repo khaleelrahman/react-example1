@@ -6,34 +6,20 @@
     top: 0;
     overflow-x: hidden;
     padding-top: 20px;
-    
-     
-  
-  
-  /* Control the left side */
+
   &.left {
     left: 0;
     background-color:linear-gradient(to right, #9C27B0, #E040FB);
-    margin-top:50px;
-    
+    margin-top:50px; 
   }
-  
-  /* Control the right side */
   &.right {
     right: 0;
     background-color:linear-gradient(to right, #9C27B0, #E040FB);
-    
   }
-
-  
-  
-  /* Style the image inside the centered container, if needed */
    img {
-    
     width: 75px;
     border-radius: 50%;
   }
-
   .card-containered {
     display: flex;
     flex-direction: column;
@@ -50,29 +36,22 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
-    
   }
   .popup{
       text-align: center;
   }
-
   .pop-cont{
     background-color:#8C55AA ;
   }
-  
-
   .card-text-headered{
     font-size: 16px;
     font-family: "Muli", "sans-serif";
     color: white;
     text-align: left;
     margin-left: 10px;
-  
   }
-
   .submiteded {
     cursor: pointer;
-    
     color: black;
     background: white;
     border: 1.5px solid yellow;
@@ -85,11 +64,8 @@
     margin-top: 1%;
     margin-bottom: 1%;
     font-size: 13px;
-    
     align-items: right;
-    
     }
-    
   .img-align{
     align-items: flex-start;
   }
@@ -106,7 +82,9 @@
       background-color: white;
     }
 .divide{
-  border-left:3px solid royalblue;
+ 
+  padding-top: 50px;
+  padding-bottom: 50px;
   }
 
   .check{
@@ -118,17 +96,64 @@
     font-family: "Muli", "sans-serif"; 
     
     margin-left: 150px;
-    margin-right: 150px;   ;
-  
-  
-  
+    margin-right: 150px;   
   .alaign{
     text-align:start;
     margin-left: 70px;
   }
-  .text-bod{
-    border: white;
-  }
- 
 }
+.left-card{
+  display: flex;
+  flex-direction: column;
+  background-color:white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 0px;
+  margin-top: 10px;
+  margin-bottom:-2rem;
+  margin-right: 25px;
+  margin-left: 25px;
+  cursor: pointer;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+.maindiv{
+  margin-top: 50px;
+}
+  .box-true{
+    
+    border-bottom: 1px solid grey;
+    margin-left: 25px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-right: 25px;
+    font-size:16px;
   }
+  .box-false{
+    margin-left: 25px;
+    padding-top: 0.001em;
+    padding-bottom: 0.001em;
+    margin-right: 25px;
+    font-size:16px;
+    background-color: grey;
+  }
+  .marg{
+    margin-top: 10px;
+  }
+  .marg2{
+    margin-top: -2.5rem;
+  }
+  .align{
+    float: right;
+  }
+  .buttrue{
+    border-color: white;
+  }
+  .butfalse{
+    border-color: black;
+  }
+  
+}
+  
