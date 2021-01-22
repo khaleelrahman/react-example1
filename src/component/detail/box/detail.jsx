@@ -1,23 +1,22 @@
 import React, { useState } from "react";
 import './details.scss'
 import Header from '../../header/header'
-
+import { ErrorMessage, Field, Formik,Form } from "formik";
 import DetailCard from "./detailCard";
 import Rating from "../survey/rating";
-
-
-
-
 const Detail=(data)=>{
 var  a=[1,2,3,4,5,6,7,8,9,10]
-
+var head=[{id:0,name:'Surface Request'},{id:1,name:'Hard Rust'},{id:3,name:'Loose Points'},{id:4,name:'Hard Strains'},{id:5,name:'Crago Residues'},{id:6,name:'Repairs'}]
 const [button,setButton]=useState(true)
 const [button2,setButton2]=useState(true)
-if('user'){
-  const change=()=>{
-    setButton(!button)
-    setButton2(true)
-  }
+const [subi,setSubi]=useState(false)
+const subit=()=>{
+  setSubi(true)
+}
+const change=()=>{
+  setButton(!button)
+  setButton2(true)
+}
   const change2=()=>{
     setButton2(!button2)
     setButton(true)
@@ -29,7 +28,7 @@ return(
         <div  className='left-card' >
             <div className='card-headered'>
               <div className='card-text-headered'> 
-                <img alt='no' src={data.location.state.data.image}/>
+                <img className='imag' alt='no' src={data.location.state.data.image}/>
                 <p >{data.location.state.data.name}</p>
               </div>
             </div>
@@ -62,14 +61,16 @@ return(
       {!button2 &&
         <div className='divide'>
           <div className="marg">
-          {a.map((index)=>(
-            <Rating key={index}/>
+          {head.map(items=>(
+          <Rating key={items.id} items={items} subi={subi}/>
+            
           ))}
           </div> 
+          <div><button className='submi' onClick={subit}>Save</button></div>
         </div> 
       }
     </div>
 </div>
 
-)}}
+)}
 export default Detail;

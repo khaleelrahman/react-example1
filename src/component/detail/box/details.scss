@@ -154,6 +154,29 @@
   .butfalse{
     border-color: black;
   }
+  .submi {
+      cursor: pointer;
+      
+      color: black;
+      background: white;
+      border: solid yellow;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      font-family: 'Ubuntu', sans-serif;
+      margin-left: 77%;
+      margin-top: 1%;
+      margin-bottom: 1%;
+      font-size: 10px;
+    
+      align-items: center;
+      transform: translateZ(0);
+      transition: transform 0.25s ease-out;
+      }
+      .submi:hover {
+        transform: scale(1.05);
+      }
   
 }
   
