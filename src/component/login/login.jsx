@@ -1,7 +1,7 @@
 import React ,{useState}from "react";
 
 import { ErrorMessage, Field, Formik,Form } from "formik";
-import {  Redirect, withRouter } from "react-router-dom";
+import {  Redirect, Route, Switch, withRouter } from "react-router-dom";
 import './login.scss'
 import { logdata } from "./data.json";
 import * as Yup from 'yup';
@@ -21,7 +21,7 @@ const Basic=(props)=>{
     const[isvalid,setLogin]=useState(false);
     console.log(isvalid)
    if(localStorage.getItem('user')){
-        return<Redirect from="/login" to="homepage"/>
+        props.history.push('/homepage')
    }
     return( 
     <div className="main">
@@ -47,7 +47,7 @@ const Basic=(props)=>{
         <Form className='form1'>
             <Field className='un' type='email' values={logdata[0].email}  name="email" placeholder="Enter Your Email"/>
             <ErrorMessage name='email' component='div' className="err"/>
-            <Field type='password' name="password" className="pass" placeholder="Enter Your Password"/>
+            <Field type='password' name="password" className="pass" placeholder="Enter Your Password" />
             {
                 isvalid&&<div className='err'>Invaild Email or Password</div>
             }

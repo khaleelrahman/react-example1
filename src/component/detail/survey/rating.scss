@@ -4,9 +4,10 @@
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
     grid-gap: 10px;
     column-gap: 1px;
-    
+    padding-top: 5px;
     grid-template-rows: 50px;
     padding-bottom: 25px;
+    margin-right: 10%;
     }
     .col{
       cursor: pointer;
@@ -50,6 +51,15 @@
     
     }
     .req{
-      color: red;
+      color: rgb(223, 93, 93);
+      font-size: 11px;
+      float: right;
+      padding-right: 10%;
+      
     }
-    
+    .maintit{
+      font-weight: bold;
+      font-size: 14px;
+      
+    }
+   

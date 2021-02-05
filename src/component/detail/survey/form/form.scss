@@ -1,0 +1,25 @@
+.h4left{ 
+
+     display: grid;
+     grid-template-columns: auto auto;
+}
+.h4right{
+    margin-left: 100px;
+    width: 200px; 
+    height: 100px; 
+    
+     display: inline-block;
+}
+.cargtext{
+    padding-top: 20px;
+    padding-bottom: 7px;
+    font-size: 10px;
+}
+.cargmain{
+
+    margin-left: 45px;
+
+}
+.reqcol{
+    color: red;
+}

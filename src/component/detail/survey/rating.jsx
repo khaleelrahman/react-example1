@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import ImageThumb from "./image";
 import './rating.scss'
 import FileUploader from "./upload";
+import ImageThumb from "./image";
 const Rating=(items,a)=>{
+    var [fArray,setFarray]=useState([])
     const [uploadd,setUpload]=useState(true)
     const[val,setVal]=useState(false)
     const [coll,setColl1]=useState({
@@ -17,12 +18,13 @@ const Rating=(items,a)=>{
         coll9:true,
         coll10:true,
     })
-    console.log(items)
+    const [file, setFile] = useState();
+    const [fileValid, setFilevalid] = useState(false);
+   
     const colChange1=()=>{
             setColl1({...coll,coll1:!coll.coll1,coll2:true,coll3:true,coll4:true,coll5:true,coll6:true,coll7:true,coll8:true,coll9:true,coll10:true,})
             setUpload(false)
-            setVal(true)
-            
+            setVal(true)  
     }
     const colChange2=()=>{
         setColl1({...coll,coll1:true,coll2:!coll.coll2,coll3:true,coll4:true,coll5:true,coll6:true,coll7:true,coll8:true,coll9:true,coll10:true,})
@@ -72,12 +74,11 @@ const Rating=(items,a)=>{
     const upload=()=>{
         setUpload(true)
     }
-    console.log(val)
+    console.log(fArray)
  return(
         <div>
-        
-        {items.items.name+'*'}&emsp;{
-            (items.subi&&!val)&& <span className='req'>Required</span>
+        <span className='maintit'>{items.items.name}</span>&emsp; {
+            ((!coll.coll1||!coll.coll2||!coll.coll3)&&!fileValid) && <span className='req'>*Refernece photographs are mandatory for ratings falling under poor category</span>
         }
         <div className='gridview'>
             <div className={coll.coll1?'col':'col3'} onClick={colChange1}>1</div>
@@ -99,12 +100,13 @@ const Rating=(items,a)=>{
             {
                 (!coll.coll1||!coll.coll2||!coll.coll3) &&<div className='col3'>Poor</div>
             }
-            <div className='col' onClick={upload}><FileUploader/></div>
+            <div className='col' onClick={upload}><FileUploader file={file} setFile={setFile} fArray={fArray} setFarray={setFarray} fileValid={fileValid} setFilevalid={setFilevalid}/></div>
+            
         </div>
-        {
-            (!uploadd) &&<p className='imgtext'>*You must upload Image</p>
+        { 
+         fArray.map((itm=>(<ImageThumb image={itm} />)))
         }
-        
+       
         </div>
     )
 }

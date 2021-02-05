@@ -11,6 +11,7 @@ import Header from "../header/header";
 
  const Home=()=>{
     const {loading,data}=useQuery(QUERRY,{ errorPolicy: 'all' })
+    
     if(!localStorage.getItem('user')){
       return <Redirect to ='/login'/>
     }

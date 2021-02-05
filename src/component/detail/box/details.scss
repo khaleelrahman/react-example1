@@ -16,10 +16,7 @@
     right: 0;
     background-color:linear-gradient(to right, #9C27B0, #E040FB);
   }
-   img {
-    width: 75px;
-    border-radius: 50%;
-  }
+  
   .card-containered {
     display: flex;
     flex-direction: column;
@@ -43,13 +40,7 @@
   .pop-cont{
     background-color:#8C55AA ;
   }
-  .card-text-headered{
-    font-size: 16px;
-    font-family: "Muli", "sans-serif";
-    color: white;
-    text-align: left;
-    margin-left: 10px;
-  }
+  
   .submiteded {
     cursor: pointer;
     color: black;
@@ -69,9 +60,7 @@
   .img-align{
     align-items: flex-start;
   }
-    .card-headered{
-      background-color: royalblue;
-    }
+  
    
     .card-footed{
       border-top: 1px solid royalblue;
@@ -102,25 +91,45 @@
     margin-left: 70px;
   }
 }
-.left-card{
-  display: flex;
-  flex-direction: column;
-  background-color:white;
-  border: 1px solid grey;
-  border-radius: 5px;
-  padding: 0px;
-  margin-top: 10px;
-  margin-bottom:-2rem;
-  margin-right: 25px;
-  margin-left: 25px;
-  cursor: pointer;
-  -moz-osx-font-smoothing: grayscale;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  transition: transform 0.25s ease-out;
-}
+
 .maindiv{
   margin-top: 50px;
+  
+}
+.detailmain{
+  margin-top: 80px;
+  margin-left: 20px;
+  margin-right: 10px;
+  background-color: rgb(218, 214, 214);
+}
+.detailsub{
+  padding-top: 20px;
+  padding-left:20px ;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 30px;
+  padding-bottom:30px ;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: rgb(46, 43, 43);
+  font-weight:lighter
+}
+.seconddetail{
+  padding-left: 20px;
+}
+.thirddetail{
+  padding-left: 20px;
+}
+.contdetail{
+  padding-left: 35%;
+}
+.cont1detail{
+  padding-left: 40%;
+}
+.subcont{
+  padding-top: 7px;
+  font-size: 13px;
+  font-weight: bold;
 }
   .box-true{
     
@@ -128,7 +137,7 @@
     margin-left: 25px;
     padding-top: 1px;
     padding-bottom: 1px;
-    margin-right: 25px;
+    margin-right: 10px;
     font-size:16px;
   }
   .box-false{
@@ -156,16 +165,16 @@
   }
   .submi {
       cursor: pointer;
+      border-radius: 0px;
+      color: white;
+      background: rgba(74,74,74,255);
       
-      color: black;
-      background: white;
-      border: solid yellow;
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
       padding-bottom: 10px;
       padding-top: 10px;
       font-family: 'Ubuntu', sans-serif;
-      margin-left: 77%;
+      margin-left: 65%;
       margin-top: 1%;
       margin-bottom: 1%;
       font-size: 10px;
@@ -176,6 +185,17 @@
       }
       .submi:hover {
         transform: scale(1.05);
+      }
+      .cargo{
+        background-color:rgb(182, 179, 179);
+        font-size: 16px;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: "Muli", "sans-serif";
+        font-weight: bold;
+        margin-left: 2%;
+        margin-right: 5%;
       }
   
 }
