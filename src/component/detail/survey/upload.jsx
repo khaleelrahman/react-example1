@@ -3,7 +3,7 @@ import React from "react";
 import './upload.scss';
 
 const FileUploader = props => {
-  var abcd = []
+  console.log(props)
     const hiddenFileInput = React.useRef(null);
     const handleClick = event => {
      
@@ -20,8 +20,8 @@ const FileUploader = props => {
     };
     
     return (
-      <div>
-          <div className='up-but' onClick={handleClick}> &#128247;
+      <div className='imgali'>
+          <div className='up-but' onClick={handleClick}><div className= {((!props.coll.coll1||!props.coll.coll2||!props.coll.coll3)&&!props.fileValid) ?'fa emoj':'fa emoj1'}> &#xf030;</div>
           </div>
         <input type="file"
                ref={hiddenFileInput}

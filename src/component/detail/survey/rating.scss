@@ -1,49 +1,107 @@
+.ratemain{
+  padding-left: 45px;
+}
+
 .gridview{
 
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-    grid-gap: 10px;
     column-gap: 1px;
     padding-top: 5px;
-    grid-template-rows: 50px;
     padding-bottom: 25px;
-    margin-right: 10%;
+    margin-right: 0%;
+    padding-right: 20px;
+    
+    
     }
     .col{
       cursor: pointer;
-      background-color: rgb(158, 152, 152);
+      background-color: rgba(190,190,190,255);
       text-align: center;
       font-size: 18px;
-      
+      height: 5px;
       padding-top:20px;
+      padding-bottom: 20px;
+    }
+    
+    .rat{
+      padding-bottom: 50px;
+      margin-bottom: 5px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .colcam{
+      cursor: pointer;
+      background-color: rgba(131,131,131,255);
+      text-align: center;
+      
+      padding-top:16px;
+      padding-bottom: 9px;
+      margin-right: 22px;
       
     }
     .col1{
       cursor: pointer;
-      background-color: rgb(236, 228, 228);
+      background-color: rgba(229,244,237,255);
       text-align: center;
       font-size: 18px;
-      
+      height: 25px;
       padding-top:20px;
-      
+    }
+    .col1res{
+      cursor: pointer;
+      background-color: rgba(229,244,237,255);
+      text-align: center;
+      font-size: 14px;
+      height: 25px;
+      font-weight: bold;
+      padding-top:16px;
+      padding-bottom: 4px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
     .col2{
       cursor: pointer;
-      background-color: rgb(243, 210, 210);
+      background-color: rgba(249,242,226,255);
       text-align: center;
       font-size: 18px;
-      
+      height: 25px;
       padding-top:20px;
-      
+    }
+    .col2res{
+      cursor: pointer;
+      background-color: rgba(249,242,226,255);
+      text-align: center;
+      font-size: 14px;
+      height: 25px;
+      font-weight: bold;
+      padding-top:16px;
+      padding-bottom: 4px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
     .col3{
       cursor: pointer;
-      background-color: rgb(223, 93, 93);
+      background-color: rgba(246,134,129,255);
       text-align: center;
       font-size: 18px;
-      
+      color: white;
       padding-top:20px;
-      
+      height: 25px;
+    }
+    .col3res{
+      cursor: pointer;
+      background-color: rgba(246,134,129,255);
+      text-align: center;
+      font-size: 14px;
+      height: 25px;
+      font-weight: bold;
+      color: white;
+      padding-top:16px;
+      padding-bottom: 4px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
     .imgtext{
       color: red;
@@ -51,15 +109,20 @@
     
     }
     .req{
-      color: rgb(223, 93, 93);
+      color: rgba(246,134,129,255);
       font-size: 11px;
       float: right;
-      padding-right: 10%;
+      padding-right: 7%;
+      padding-top: 3px;
       
     }
     .maintit{
       font-weight: bold;
       font-size: 14px;
       
+    }
+    .imgdiv{
+        padding-bottom: 15px;
+        margin-top: -1rem;
     }
    
