@@ -1,11 +1,11 @@
 import React from "react";
 import './input.scss'
 const Input=(props)=>{
-    console.log(props)
+   
 
     return(
         <div>
-        <div className= 'cargtext'>{props.items}   {props.formik.errors[props.text] &&props.formik.touched[props.text] &&(
+        <div className= {`${props.size} cargtext`}>{props.items}   {props.formik.errors[props.text] &&props.formik.touched[props.text] &&(
             <span className='reqcol'>{props.formik.errors[props.text]}</span>)}</div>
         <input
         id={props.text}

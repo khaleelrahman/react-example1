@@ -8,8 +8,7 @@ const Formdata=()=>{
   {id:3,name:"Cargo Hold Condition",text:"text3",value:""}, {id:4,name:"Cargo Hold Readiness",text:"text4",value:""},{id:5,name:"Prepration For Loading",text:"text5",value:""},
   {id:6,name:"Prepration After Loading",text:"text6",value:""},{id:7,name:"Access to Holds",text:"text7",value:""},{id:8,name:"Railing of Hatch Covers",text:"text8",value:""},
   {id:9,name:"Sweeping Of Hatch Covers",text:"text9",value:""},{id:10,name:"Cargo Hold Lights",text:"text10",value:""},{id:11,name:"Cargo Hold Ladders And Access",text:"text11",value:""}]
-  var k1=[{id:0,name:'khaleel',text:'text',value:""},{id:0,name:'khaleel',text:'text1',value:""},{id:0,name:'khaleel',text:'text2',value:""},
-  {id:0,name:'khaleel',text:'text3',value:""},{id:0,name:'khaleel',text:'text4',value:""},{id:0,name:'khaleel',text:'text5',value:""}]
+  
   const formik = useFormik({
     initialValues: {
       text:"",text1:"",text2:"",text3:"",text4:"",text5:"",text6:"",text7:"",text8:"",text9:"",text10:"",text11:""
@@ -41,8 +40,8 @@ const Formdata=()=>{
               <Input key={items.id} items={items.name} formik={formik} text={items.text} value={items.value}/>
               )}
           </div>
-      <button type="submit" className='submitf' onClick={formik.handleChange}>Submit</button>
       </div>
+      <button type="submit" className='submitf' onClick={formik.handleChange}>Submit</button>
     </form>
     </div>
   );

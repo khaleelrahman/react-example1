@@ -32,8 +32,9 @@ const Formdata1=()=>{
                 <Input key={items.id} items={items.name} formik={formik} text={items.text} value={items.value} size={items.size}/>
                 )}
             </div>
-        <button type="submit" className='submitf' onClick={formik.handleChange}>Submit</button>
+       
         </div>
+        <button type="submit" className='submitf' onClick={formik.handleChange}>Submit</button>
       </form>
       </div>
     );

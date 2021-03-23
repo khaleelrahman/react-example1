@@ -1,0 +1,83 @@
+.addcargomain{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin-top: 25px;
+}
+.loycanfst{
+   
+    padding-left: 15px;
+}
+.laycanfro{
+    border: 1px solid rgba(122,122,122,255);
+    background-color: white;
+    margin-left:5px;
+    width: 50px;
+    height: 28px;
+    margin-top: 18px;
+}
+.laycanfro1{
+    border: 1px solid rgba(122,122,122,255);
+    background-color: white;
+    margin-left: 5px;
+    padding-left: 3px;
+    width: 50px;
+    height: 28px;
+    margin-top: 18px;
+}
+.gmt{
+    padding-left: 20px;
+}
+.addcargomain1{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 18px;
+    column-gap: 35px;
+}
+.stowage{
+    margin-top: 10px;
+    border: 2px solid black;
+    width: 547px;
+    height: 70px;
+    margin-top: 25px;
+}
+.stowage-planl{
+    align-items: center;
+    border-right: 1px solid black;
+    height: 70px;
+    float: left;
+    padding-right: 8%;
+    padding-left: 10%;
+    
+}
+.stowage-planr{
+     margin-left: 277px;
+}
+.plan1{
+    padding-left: 10px;
+    height: 23px;
+    border-bottom: 1px solid black;
+}
+.stowage-upload{
+    padding-top: 10%;
+    align-items: center;
+}
+
+
+.qualitymain{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 15px;
+    column-gap: 16px;
+}
+.metric{
+    margin-top: 30px;
+    font-size: 12px;
+}
+.dead{
+    padding-left: 90px;
+}
+.qualitymain1{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 16px;
+}
